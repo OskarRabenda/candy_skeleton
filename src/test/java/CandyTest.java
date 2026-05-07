@@ -41,7 +41,7 @@ public class CandyTest {
 //# BEGIN TODO: Additional test cases
     
     @Test
-    public void testDivideExactly(){
+    public void testDivideExactlySmall(){
         check(3, 9, true);
     }
 
@@ -66,6 +66,26 @@ public class CandyTest {
     }
 
     @Test
+    public void testDivideZeroCandies(){
+        check(7, 0, true);
+    }
+
+    @Test
+    public void testDivideZeroBoth(){
+        check(0, 0, true); // 0 == 0*0, postcondition requires returning 0
+    }
+
+    @Test
+    public void testDivideMaxValueExact(){
+        check(1L, 999999999999999999L, true);
+    }
+
+    @Test
+    public void testDivideMaxValueBothEqual(){
+        check(999999999999999999L, 999999999999999999L, true);
+    }
+
+    @Test
     public void testDivideWithRemainder(){
         check(3, 10, false);
     }
@@ -81,18 +101,8 @@ public class CandyTest {
     }
 
     @Test
-    public void testDivideZeroKids(){
-        check(0, 16, false);
-    }
-
-    @Test
-    public void testDivideZeroBoth(){
-        check(0, 0, false);
-    }
-
-    @Test
-    public void testDivideZeroCandies(){
-        check(7, 0, true);
+    public void testDivideZeroKidsPositiveCandies(){
+        check(0, 16, false); 
     }
 
 //# END TODO
