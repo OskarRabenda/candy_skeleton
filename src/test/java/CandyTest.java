@@ -39,34 +39,53 @@ public class CandyTest {
     }
 
 //# BEGIN TODO: Additional test cases
-@Test 
+@Test
+public void testDivideExactly(){
+    check(3, 9, true);
+}
+@Test
+public void testDivideExactlyLargeNumbers(){
+    check(5, 25, true);
+}
+@Test
+public void testDivideWithRemainder(){
+    check(3, 10, false);
+}
+@Test
+public void testDivideWithRemainderOdd(){
+    check(4, 7, false);
+}
+@Test
 public void testDivideExampleBothNegative(){
     check(-1, -15, false);
 }
-
-@Test 
+@Test
 public void testDivideExampleNegativeKids(){
-    check(-2,16, false);
+    check(-2, 16, false);
 }
-
-@Test 
+@Test
 public void testDivideExampleNegativeCandies(){
-    check(2,-16, false);
+    check(2, -16, false);
 }
-
-@Test 
+@Test
 public void testDivideExampleDivisionOver0(){
-    check(0,16, false);
+    check(0, 16, false);
 }
-
-@Test 
+@Test
 public void testDivideExampleDivisionBoth0(){
-    check(0,0, false);
+    check(0, 0, false);
 }
-
-@Test 
-public void testDivideExampleDivisionOver0Candies(){
-    check(7,0, true);
+@Test
+public void testDivideExampleZeroCandies(){
+    check(7, 0, false);
+}
+@Test
+public void testDivideOneKid(){
+    check(1, 7, true);
+}
+@Test
+public void testDivideEqualKidsAndCandies(){
+    check(5, 5, true);
 }
 
 //# END TODO
