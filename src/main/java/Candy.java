@@ -43,10 +43,10 @@ public class Candy {
     static long divide(long k, long c) {
 
 //# BEGIN TODO: Provide method implementation
-      long error = -1;
+    long error = -1;
     long result;
 
-    if (k <= 0 || c < 0) {
+    if (k == 0) {
         result = error;
     } else if (c % k == 0) {
         result = c / k;
