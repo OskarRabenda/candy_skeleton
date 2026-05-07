@@ -43,7 +43,17 @@ public class Candy {
     static long divide(long k, long c) {
 
 //# BEGIN TODO: Provide method implementation
-// Replace this line
+  long error = -1;
+        double check_candy = c;
+        double check_kids = k;
+        long result = 0; // value to be returned
+        result = c  / k;
+        
+        if(result == check_candy / check_kids) {
+            result = result;
+        } else {
+            result = error;
+        }
 //# END TODO
         return result;
     }
