@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
  * the test with JUnit.
  *
 <!--//# BEGIN TODO: Name, student ID, and date-->
-<p><b>Replace this line</b></p>
+<p><b>Oskar Rabenda, 2332159, 7.05.2026</b></p>
 <!--//# END TODO-->
  */
 public class CandyTest {
@@ -39,7 +39,36 @@ public class CandyTest {
     }
 
 //# BEGIN TODO: Additional test cases
-// Replace this line
+@Test 
+public void testDivideExampleBothNegative(){
+    check(-1, -15, false);
+}
+
+@Test 
+public void testDivideExampleNegativeKids(){
+    check(-2,16, false);
+}
+
+@Test 
+public void testDivideExampleNegativeCandies(){
+    check(2,-16, false);
+}
+
+@Test 
+public void testDivideExampleDivisionOver0(){
+    check(0,16, false);
+}
+
+@Test 
+public void testDivideExampleDivisionBoth0(){
+    check(0,0, false);
+}
+
+@Test 
+public void testDivideExampleDivisionOver0Candies(){
+    check(7,0, true);
+}
+
 //# END TODO
 
 }
